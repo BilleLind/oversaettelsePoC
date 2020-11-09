@@ -1,0 +1,12 @@
+{"languages": {
+            "en": {
+                "strings": {
+                    "welcome": "Welcome to "
+                }
+            },
+            "da": {
+                "strings": {
+                    "welcome": "Velkommen til "
+                }
+            }
+        }}
