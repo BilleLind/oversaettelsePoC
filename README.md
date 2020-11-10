@@ -18,3 +18,28 @@ kør det sådan her:
 
 gør i dev med nodemon kommandoen, istedet for npm start:
 nodemon ./bin/www
+
+
+Fremgangs måde
+---------------------------------------------------------------------------------------------------------------------------------------------
+tilføj en data-key="dinDataKey", tilføj nu den string værdi der skal vises der til JSON under script eksempel
+
+var langdata = {
+   "languages": {
+    "en": {
+      "strings": {
+      "dinDataKey": "this is what that are appended",
+      "dinDataKey+hbs": "this is what that are inputted {{yeah}}
+          }
+          }
+     "da": {
+      "strings": {
+       "dinDatakey": "dette er hvad der er tilføjet",
+       "dinDataKey+hbs": "dette er hvad der er sat ind {{yeah}}
+       }
+      }
+    }
+}
+
+ellers se på layout.hbs, +hbs værdien er lavet så man kan tilføjede/beholde {{værdier}} på det korrekte sted, eller bliver de, hvis de er der i forvejen tilføjet til slut
+ 
