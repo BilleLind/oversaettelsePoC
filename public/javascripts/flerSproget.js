@@ -7,12 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 function brugStrings(lang) {
+    //køre igennem alt i dokumentet, leder efter data-key keys i html
     document.querySelectorAll('html [data-key]').forEach(element => {
+        //for hvert data-key værdi, leder den efter det i json navngivet langdata
         let key = element.getAttribute('data-key');
         if(key) {
             let temp = element.textContent;
             element.textContent = langdata.languages[lang].strings[key];
+            if(!key.includes("+hbs")) { // hvis der er +hbs, så appender det ikke
             element.textContent += temp
+            }
         }
     });
 }
